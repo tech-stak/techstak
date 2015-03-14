@@ -18,6 +18,7 @@ var setBio = function(data) {
   _state.bio = data;
 };
 
+
 var githubStore = objectAssign({}, EventEmitter.prototype, {
   addChangeListener: function(cb) {
     this.on(CHANGE_EVENT, cb);
@@ -25,27 +26,30 @@ var githubStore = objectAssign({}, EventEmitter.prototype, {
   removeChangeListener: function(cb) {
     this.removeListener(CHANGE_EVENT, cb);
   },
-  getState: function(){
-    return _state;
-  };
+  getUser: function() {
+    return _state.user;
+  },
+  getBio: function() {
+    return _state.bio;
+  }
 });
 
-AppDispatcher.register(function(payload){
-  
+AppDispatcher.register(function(payload) {
+
   var action = payload.action;
-  
-  switch(action.actionType){
-  
-    case appConstants.GITHUB_USER_BIO :
+
+  switch (action.actionType) {
+
+    case appConstants.GITHUB_USER_BIO:
       setBio(action.data);
       githubStore.emit(CHANGE_EVENT);
       break;
-  
-    case appConstants.GITHUB_CHANGE_USER :
+
+    case appConstants.GITHUB_CHANGE_USER:
       newUser(action.data);
       githubStore.emit(CHANGE_EVENT);
       break;
-  
+
     default:
       return true;
   }
