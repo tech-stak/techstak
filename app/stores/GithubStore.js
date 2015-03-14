@@ -18,7 +18,6 @@ var setBio = function(data) {
   _state.bio = data;
 };
 
-
 var githubStore = objectAssign({}, EventEmitter.prototype, {
   addChangeListener: function(cb) {
     this.on(CHANGE_EVENT, cb);
