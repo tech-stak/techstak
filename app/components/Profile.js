@@ -25,4 +25,3 @@ var Profile = React.createClass({
 });
 
 module.exports = Profile;
-
