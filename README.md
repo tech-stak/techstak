@@ -1,7 +1,7 @@
-##Tech Stack
+##Tech Stak
 
 ####PURPOSE
-This project was born out of our own frustrations locating startups hiring for the technologies we're most interested in working with. Querying AngelList for specific technologies can be a haphazard process that often yields inaccurate results. Saving companies into organized lists is also a challenge and we found ourselves copying and pasting relevant company data into Evernote. We decided to build Tech Stack because we think we can do better.
+This project was born out of our own frustrations locating startups hiring for the technologies we're most interested in working with. Querying AngelList for specific technologies can be a haphazard process that often yields inaccurate results. Saving companies into organized lists is also a challenge and we found ourselves copying and pasting relevant company data into Evernote. We decided to build Tech Stak because we think we can do better.
 
 The purpose of this project is to help job seekers find the jobs they're most interested in pursuing. Specifically, locating startups using their favorite tech stack. 
 
