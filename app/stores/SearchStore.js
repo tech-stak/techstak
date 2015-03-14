@@ -20,9 +20,9 @@ var searchStore = objectAssign({}, EventEmitter.prototype, {
   removeChangeListener: function(cb) {
     this.removeListener(CHANGE_EVENT, cb);
   },
-  getState: function() {
-    return _state;
-  };
+  getJobs: function() {
+    return _state.jobs;
+  },
 });
 
 AppDispatcher.register(function(payload) {
@@ -36,9 +36,14 @@ AppDispatcher.register(function(payload) {
       searchStore.emit(CHANGE_EVENT);
       break;
 
+    case appConstants.ANGEL_CHANGE_SEARCH:
+      setJobs(action.data);
+      searchStore.emit(CHANGE_EVENT);
+      break;
+
     default:
       return true;
   }
 });
 
-module.exports = githubStore;
+module.exports = searchStore;

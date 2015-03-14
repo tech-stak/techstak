@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var objectAssign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
 
@@ -14,7 +14,7 @@ var addFavorite = function(favorite){
 	_state.favorites.push(favorite);
 };
 
-var chageUser = function(newUserObj){
+var changeUser = function(newUserObj){
 	_state = {
 		favorites: newUserObj.favorites,
 		user: newUserObj.user

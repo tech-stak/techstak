@@ -5,7 +5,8 @@ var appConstants = {
 	GITHUB_USER_BIO: 'GITHUB_USER_BIO',
 	GITHUB_CHANGE_USER: 'GITHUB_CHANGE_USER',
 	FIREBASE_HOST: 'https://techstak.firebaseio.com',
-  ANGEL_GET_JOBS: 'ANGEL_GET_JOBS'
+  ANGEL_GET_JOBS: 'ANGEL_GET_JOBS',
+  ANGEL_CHANGE_SEARCH: 'ANGEL_CHANGE_SEARCH'
 };
 
 module.exports = appConstants;
