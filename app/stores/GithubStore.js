@@ -25,12 +25,9 @@ var githubStore = objectAssign({}, EventEmitter.prototype, {
   removeChangeListener: function(cb) {
     this.removeListener(CHANGE_EVENT, cb);
   },
-  getUser: function() {
-    return _state.user;
-  },
-  getBio: function() {
-    return _state.bio;
-  }
+  getState: function(){
+    return _state;
+  };
 });
 
 AppDispatcher.register(function(payload){

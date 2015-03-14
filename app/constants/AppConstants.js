@@ -1,0 +1,10 @@
+var appConstants = {
+	ADD_FAVORITE: 'ADD_FAVORITE',
+	DELETE_FAVORITE: 'DELETE_FAVORITE',
+	CHANGE_USER: 'CHANGE_USER',
+	GITHUB_USER_BIO: 'GITHUB_USER_BIO',
+	GITHUB_CHANGE_USER: 'GITHUB_CHANGE_USER',
+	FIREBASE_HOST: 'https://techstak.firebaseio.com'
+};
+
+module.exports = appConstants;

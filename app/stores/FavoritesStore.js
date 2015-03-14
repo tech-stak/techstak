@@ -26,7 +26,15 @@ var chageUser = function(newUserObj){
 // };
 
 var favoritesStore = objectAssign({}, EventEmitter.prototype, {
-
+	addChangeListener: function(cb) {
+    	this.on(CHANGE_EVENT, cb);
+  	},
+  	removeChangeListener: function(cb) {
+    	this.removeListener(CHANGE_EVENT, cb);
+  	},
+  	getState: function(){
+  		return _state;
+  	};
 });
 
 AppDispatcher.register(function(payload){
