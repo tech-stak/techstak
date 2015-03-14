@@ -13,9 +13,9 @@ var Profile = React.createClass({
 				<div className="col-md-4">
 					<Left username={username}/>
 				</div>
-				<div classname="col-md-4">
-					<Middle username={username}/>
-				</div>
+				// <div classname="col-md-4">
+				// 	<Middle username={username}/>
+				// </div>
 				<div classname ="col-md-4">
 					<Favorites username={username}/>
 				</div>
