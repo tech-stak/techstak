@@ -6,10 +6,13 @@ var favoritesActions = {
 	addFavorite: function(favObj){
 		AppDispatcher.handleAction({
 			actionType: appConstants.ADD_FAVORITE,
+			//////might not be favObj.favorite //////
+			//////change to write to Firebase ///////
 			data: favObj.favorite
 		});
 	},
 	//////////////FINISH DELETE///////////////
+	//////change to write to Firebase ///////
 	deleteFavorite: function(favObj){
 		AppDispatcher.handleAction({
 			actionType: appConstants.DELETE_FAVORITE,
