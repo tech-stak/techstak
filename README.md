@@ -25,6 +25,10 @@ The default folder structure should look like this
 ```
 ├── app/
 │   ├── App.js
+|   ├── actions/
+|   ├── ├── FavoritesActions.js
+|   ├── ├── GithubActions.js
+|   ├── ├── SearchActions.js
 |   ├── components/
 |   ├── ├── login-register/
 |   ├── ├── ├── Login.js
@@ -33,7 +37,7 @@ The default folder structure should look like this
 |   ├── ├── Main.js
 |   ├── ├── Home.js
 |   ├── constants/
-|   ├── ├── routes.js
+|   ├── ├── AppConstants.js
 |   ├── config/
 |   ├── dispatcher/
 |   ├── stores/
@@ -43,8 +47,6 @@ The default folder structure should look like this
 |   ├── utils/
 |   ├── ├── FirebaseUtils.js
 |   ├── ├── GithubUtils.js
-|   ├── ├── nbaTeams.js
-|   ├── ├── firebaseUtils.js
 ├── public/
 │   ├── index.html
 |   ├── images/
