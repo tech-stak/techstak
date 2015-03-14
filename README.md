@@ -14,12 +14,7 @@ Not only does this streamline the job search process but it also allows job seek
   * run ```npm install```
   * Familiarize yourself with the given code and file structure
 
-For reference the final folder structure will look something like this:
-
-####FILE STRUCTURE
-
-###Step 1: Code Architecture
-Let's get familiar with the code we're given.
+###CODE ARCHITECTURE
 
 The default folder structure should look like this
 ```
