@@ -9,3 +9,6 @@ var appConstants = {
 };
 
 module.exports = appConstants;
+
+//Tyler had his FIREBASE_HOST with the url and then '/notes', should we be doing that with
+//our FIREBASE_HOST as well??
