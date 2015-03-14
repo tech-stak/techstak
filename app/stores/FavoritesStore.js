@@ -20,10 +20,10 @@ var chageUser = function(newUserObj){
 		user: newUserObj.user
 	};
 };
-
-// var deleteFavorite = function(favoriteToDelete){
+///////////FINISH ////////
+var deleteFavorite = function(objToDelete){
 	//COMPLETE		
-// };
+};
 
 var favoritesStore = objectAssign({}, EventEmitter.prototype, {
 	addChangeListener: function(cb) {
@@ -43,12 +43,19 @@ AppDispatcher.register(function(payload){
   
   switch(action.actionType){
   
-    case appConstants.XXXXX :
-      
+    case appConstants.ADD_FAVORITE :
+      addFavorite(action.data);
+      favoritesStore.emit(CHANGE_EVENT);
       break;
   
-    case appConstants.XXXXX :
-      
+    case appConstants.DELETE_FAVORITE :
+      deleteFavorite(action.data);
+      favoritesStore.emit(CHANGE_EVENT);
+      break;
+
+  	case appConstants.CHANGE_USER :
+      chageUser(action.data);
+      favoritesStore.emit(CHANGE_EVENT);
       break;
   
     default:
