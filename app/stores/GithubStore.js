@@ -33,4 +33,25 @@ var githubStore = objectAssign({}, EventEmitter.prototype, {
   }
 });
 
+AppDispatcher.register(function(payload){
+  
+  var action = payload.action;
+  
+  switch(action.actionType){
+  
+    case appConstants.GITHUB_USER_BIO :
+      setBio(action.data);
+      githubStore.emit(CHANGE_EVENT);
+      break;
+  
+    case appConstants.GITHUB_CHANGE_USER :
+      newUser(action.data);
+      githubStore.emit(CHANGE_EVENT);
+      break;
+  
+    default:
+      return true;
+  }
+});
+
 module.exports = githubStore;
