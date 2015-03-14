@@ -1,6 +1,8 @@
 var React = require('react');
 var favoritesActions = require();
 var favoritesStore = require();
+//PROBABLY NEED TO REQUIRE SOMETHING ELSE AS WELL
+//REMOVE THE THING TO ADD TEXT OTHER THAN THE SEARCH BAR
 
 var AddFavorite = React.createClass({
 	handleSubmit: function(){
