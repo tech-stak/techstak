@@ -11,7 +11,6 @@ var favoritesActions = {
 			data: favObj.favorite
 		});
 	},
-	//////////////FINISH DELETE///////////////
 	//////change to write to Firebase ///////
 	deleteFavorite: function(favObj){
 		AppDispatcher.handleAction({

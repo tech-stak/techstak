@@ -7,7 +7,7 @@ var Home = React.createClass({
 	render: function(){
 		return (
 			<h2 className="text-center">
-				Search by Technology
+				Search by Technology Above
 			</h2> 
 		)
 	}
