@@ -6,18 +6,16 @@ var favoritesActions = {
 	addFavorite: function(favObj){
 		AppDispatcher.handleAction({
 			actionType: appConstants.ADD_FAVORITE,
-			//////might not be favObj.favorite //////
-			//////change to write to Firebase ///////
 			data: favObj.favorite
 		});
+		firebaseUtils.addFavorite(favObj);
 	},
-	//////////////FINISH DELETE///////////////
-	//////change to write to Firebase ///////
 	deleteFavorite: function(favObj){
 		AppDispatcher.handleAction({
 			actionType: appConstants.DELETE_FAVORITE,
-			data: favObj.XXXX
+			data: favObj.favorite
 		});
+		firebaseUtils.deleteFavorite(favObj);
 	},
 	changeUser: function(username){
 		firebaseUtils.homeInstance().child(username).on('value', function(snapshot){

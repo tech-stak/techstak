@@ -6,7 +6,13 @@ var favoritesStore = require();
 
 var AddFavorite = React.createClass({
 	handleSubmit: function(){
-		////////FINISH	
+		var user = favoritesStore.getState().user;
+		var newFavorite = this.refs.favorite.getDOMNode().value;
+		this.refs.favorite.getDOMNode().value = '';
+		favoritesActions.addFavorite({
+			user: user,
+			favorite: newFavorite
+		});
 	},
 	render: function(){
 		return (
@@ -21,5 +27,3 @@ var AddFavorite = React.createClass({
 });
 
 module.exports = AddFavorite;
-
-////WHATS A GENERAL RULE FOR DECIDING WHAT SHOULD BE CAPITALIZED??
