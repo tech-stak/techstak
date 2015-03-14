@@ -1,4 +1,4 @@
-var appConstants = require('./constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var axios = require('axios');
 
 var id = "5f6af7fbca524e718fe9";
@@ -10,6 +10,7 @@ var githubUtils = {
     var url = "https://api.github.com/users/" + username + param;
     return axios.get(url);
   }
+
 };
 
 modules.exports = githubUtils;

@@ -1,4 +1,4 @@
-var appConstants = require('./constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var axios = require('axios');
 var skillTags = require('./data/skills')
 
