@@ -1,19 +1,15 @@
 var Firebase = require('firebase');
 var appConstants = require('../constants/appConstants');
 
-//What will firebase look like after adding one favorite?
-//What will firebase look like after adding one favorites?
-//How do I delete from Firebase
 var firebaseUtils = {
 	homeInstance: function(){
 		return new Firebase(appConstants.FIREBASE_HOST);
 	},
 	addFavorite: function(favObj){
-		this.homeInstance().child(favObj.user).push(favObj);
+		this.homeInstance().child(favObj.user).push(favObj.favorite);
 	},
-	///////////FINISH////////
 	deleteFavorite: function(favObj){
-		this.homeInstance().child(favObj.user).child('favorites').child(favObj.favToDelete).remove();
+		this.homeInstance().child(favObj.user).child('favorites').child(favObj.favorite).remove();
 	},
 	toArray: function(obj){
 		var array = [];
