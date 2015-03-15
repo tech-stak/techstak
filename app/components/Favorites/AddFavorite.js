@@ -1,6 +1,6 @@
 var React = require('react');
-var favoritesActions = require();
-var favoritesStore = require();
+var favoritesActions = require('../../actions/FavoritesActions');
+var favoritesStore = require('../../stores/FavoritesStore');
 //PROBABLY NEED TO REQUIRE SOMETHING ELSE AS WELL
 //REMOVE THE THING TO ADD TEXT OTHER THAN THE SEARCH BAR
 

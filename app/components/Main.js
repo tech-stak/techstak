@@ -2,7 +2,7 @@ var React = require('react');
 var Home = require('./Home');
 var Router = require('react-router');
 ///DON'T QUITE UNDERSTAND WHY I'M PUTTING ROUTEHANDLER IN THE HTML??
-var RouterHandler = Router.RouterHandler;
+var RouteHandler = Router.RouteHandler;
 var SearchAngelList = require('./SearchAngelList');
 
 var Main = React.createClass({
@@ -15,9 +15,11 @@ var Main = React.createClass({
 					</div>
 				</nav>
 				<div className="container">
-					<RouterHandler/>
+					<RouteHandler/>
 				</div>
 			</div>
 		)
 	}
 });
+
+module.exports = Main;

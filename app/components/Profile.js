@@ -1,6 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
-var favoritesStore = require('../../stores/favoritesStore');
+var favoritesStore = require('../stores/FavoritesStore');
 var Left = require('./Github/Left');
 var Middle = require('./Github/Middle');
 var Favorites = require('./Favorites/Favorites');

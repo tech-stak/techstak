@@ -34,7 +34,7 @@ var favoritesStore = objectAssign({}, EventEmitter.prototype, {
   	},
   	getState: function(){
   		return _state;
-  	};
+  	}
 });
 
 AppDispatcher.register(function(payload){

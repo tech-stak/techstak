@@ -13,4 +13,4 @@ var githubUtils = {
 
 };
 
-modules.exports = githubUtils;
+module.exports = githubUtils;

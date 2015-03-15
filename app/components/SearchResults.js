@@ -1,6 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
-var SearchStore = require('../stores/searchStore');
+var SearchStore = require('../stores/SearchStore');
 var Results = require('../components/Search/Results');
 
 var SearchResults = React.createClass({
