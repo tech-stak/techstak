@@ -10,16 +10,14 @@ var SearchAngelList = React.createClass({
   },
   render: function(){
     return (
-      <div className="col-sm-12">
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group col-sm-7">
-            <input type="text" className="form-control" ref="skilltag" />
-          </div>
-          <div className="form-group col-sm-5">
-            <button type="submit" className="btn btn-block btn-primary">Search Technologies</button>
+          <div className="input-group">
+            <input type="text" className="form-control" placeholder="Search" ref="skilltag"/>
+              <span className="input-group-btn">
+               <button type="submit" className="btn btn-default" type="button">Go!</button>
+              </span>
           </div>
         </form>
-      </div>
     )
   }
 });
