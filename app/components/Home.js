@@ -1,6 +1,6 @@
 var React = require('react');
 //DO WHAT ARE THE GITHUBACTIONS AND SEARCHANGELLIST FOR??
-var githubActions = require('../actions/githubActions');
+var githubActions = require('../actions/GithubActions');
 var SearchAngelList = require('./SearchAngelList');
 
 var Home = React.createClass({

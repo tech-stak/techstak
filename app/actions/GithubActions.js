@@ -1,6 +1,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher.js');
 var appConstants = require('../constants/AppConstants');
-var githubUtils = require('../utils/githubUtils');
+var githubUtils = require('../utils/GithubUtils');
 
 var githubActions = {
 	getUserBio: function(username){

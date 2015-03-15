@@ -1,6 +1,6 @@
 var React = require('react');
-var githubActions = require('../../actions/githubActions');
-var githubStore = require('../../stores/githubStore');
+var githubActions = require('../../actions/GithubActions');
+var githubStore = require('../../stores/GithubStore');
 
 var Left = React.createClass({
 	getInitialState: function(){
@@ -27,7 +27,7 @@ var Left = React.createClass({
 			user: githubStore.getUser(),
 			bio: githubStore.getBio()
 		});
-	}
+	},
 	render: function(){
 		return (
 			<div>
@@ -45,4 +45,4 @@ var Left = React.createClass({
 	}
 });
 
-modules.export = Left;
+module.export = Left;

@@ -5,7 +5,7 @@ var SearchAngelList = React.createClass({
   mixins: [Router.Navigation],
   handleSubmit: function(){
     var skilltag = this.refs.skilltag.getDOMNode().value;
-    this.refs.username.getDOMNode().value = ''
+    this.refs.skilltag.getDOMNode().value = ''
     this.transitionTo('search', {skilltag: skilltag});
   },
   render: function(){

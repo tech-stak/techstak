@@ -1,16 +1,18 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var objectAssign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
 
 var CHANGE_EVENT = 'change';
 
 var _state = {
-  jobs: []
+  jobs: [],
+  total: 0
 };
 
 var setJobs = function(data) {
   _state.jobs = data.jobs; //returns an array of jobs
+  _state.total = data.total;
 };
 
 var searchStore = objectAssign({}, EventEmitter.prototype, {
@@ -23,6 +25,9 @@ var searchStore = objectAssign({}, EventEmitter.prototype, {
   getJobs: function() {
     return _state.jobs;
   },
+  getTotal: function() {
+    return _state.total;
+  }
 });
 
 AppDispatcher.register(function(payload) {

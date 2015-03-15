@@ -1,6 +1,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher.js');
 var appConstants = require('../constants/AppConstants');
-var firebaseUtils = require('../utils/firebaseUtils');
+var firebaseUtils = require('../utils/FirebaseUtils');
 
 var favoritesActions = {
 	addFavorite: function(favObj){

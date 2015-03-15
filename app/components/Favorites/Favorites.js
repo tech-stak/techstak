@@ -1,8 +1,8 @@
 var React = require('react');
-var favoritesStore = require('../../stores/favoritesStore');
-var AddFavorite = require('../AddFavorite');
+var favoritesStore = require('../../stores/FavoritesStore');
+var AddFavorite = require('./AddFavorite');
 var FavoritesList = require('./FavoritesList');
-var favoritesActions = require('../../actions/favoritesActions');
+var favoritesActions = require('../../actions/FavoritesActions');
 
 var Favorites = React.createClass({
 	getInitialState: function(){
@@ -31,7 +31,7 @@ var Favorites = React.createClass({
 	},
 	_onChange: function(){
 		this.setState({
-			favorites: favoritesStore.getState().favorites;
+			favorites: favoritesStore.getState().favorites
 		})
 	}
 });
