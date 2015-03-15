@@ -11,10 +11,11 @@ var Profile = require('../components/Profile');
 
 var routes = (
 	<Route name="app" path="/" handler={Main}>
-    <DefaultRoute handler={Home} />
     <Route name="search" path="search/:skilltag" handler={SearchResults} />
 		<Route name="profile" path="profile/:username" handler={Profile} />
+    <DefaultRoute handler={Home} />
 	</Route>
 );
 
+console.log(routes);
 module.exports = routes;

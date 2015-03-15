@@ -8,11 +8,7 @@ var SearchResults = React.createClass({
   render: function(){
     var skilltag = this.getParams().skilltag;
     return (
-      <div className="row">
-        <div className="col-md-12">
-          <Results skilltag={skilltag}/>
-        </div>
-      </div>
+      <Results skilltag={skilltag}/>
     )
   }
 });

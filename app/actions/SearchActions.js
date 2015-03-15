@@ -8,7 +8,7 @@ var callback = function(response) {
     actionType: appConstants.ANGEL_GET_JOBS,
     data: response
   });
-}
+};
 
 var searchActions = {
   getJobs: function(skillTagName) {

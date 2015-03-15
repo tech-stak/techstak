@@ -4,9 +4,6 @@ var Router = require('react-router');
 var SearchAngelList = React.createClass({
   mixins: [Router.Navigation],
   handleSubmit: function(){
-    console.log('this: ', this);
-    console.log('this.refs: ', this.refs);
-    console.log('this.refs.skilltag: ', this.refs.skilltag);
     var skilltag = this.refs.skilltag.getDOMNode().value;
     this.refs.skilltag.getDOMNode().value = ''
     this.transitionTo('search', {skilltag: skilltag});

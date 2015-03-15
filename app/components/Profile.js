@@ -8,6 +8,7 @@ var Favorites = require('./Favorites/Favorites');
 var Profile = React.createClass({
 	mixins: [ Router.State ],
 	render: function(){
+    var username = 'alexhawkins';
 		return (
 			<div className="row">
 				<div className="col-md-4">

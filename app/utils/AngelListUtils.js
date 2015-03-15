@@ -11,7 +11,7 @@ var angelListUtils = {
     var skillTagID = skillTags[skillTagName];
     var angelListURL = "https://api.angel.co/1/tags/" + skillTagID + '/' + param;
     // return axios.get(url);
-    return $.ajax({
+    $.ajax({
       url: angelListURL,
       dataType: 'JSONP',
       error: function(error) {
