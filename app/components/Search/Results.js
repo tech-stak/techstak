@@ -31,6 +31,7 @@ var Results = React.createClass({
   render: function(){
     var total = this.state.total;
     var skill = this.state.skill;
+    console.log(jobs);
     var jobs = this.state.jobs.map(function(job, index){
 
       var logo = job.startup.logo_url;
@@ -45,24 +46,33 @@ var Results = React.createClass({
       var salaryMax = helpers.abbrNum(job.salary_max, 0);
       var equityMin = job.equity_min;
       var equityMax = job.equity_max;
-      var skills = job.tags.map(function(tag, index){
-        if(tag.tag_type === 'SkillTag')
-          return tag.displayName;
-      }).join(', ');
+      //get skills and location
+      var skills = [];
+      var location = '';
+
+      job.tags.forEach(function(tag){
+        if(skills.length < 10 && tag.tag_type === 'SkillTag')
+          skills.push(tag.display_name);
+        if(tag.tag_type === 'LocationTag')
+          location = tag.display_name;
+      });
+
       return (
         <div className="item" key={index}>
-          <div className="box-shadow well"> 
+          <div className="well"> 
             <a href={jobURL && jobURL}>
               <img src={logo && logo} className="img-thumbnail company-logo" alt={name && name} />
             </a>
               <h2>{name && name}</h2>
               <h4>{jobTitle && jobTitle}</h4>
-              <h5 className>COMPENSATION</h5>
+              <h5 className="divider">LOCATION</h5>
+              <p>{location}</p>
+              <h5 className="divider">SKILLS</h5>
+              <p><small>{skills.join(', ')}</small></p>
+              <h5 className="divider">COMPENSATION</h5>
               <p>${salaryMin} - ${salaryMax} Salary<br/>
                   {equityMin}% - {equityMax}% Equity
               </p>
-              <h5 className>LOCATION</h5>
-              <p>{location}</p>
           </div>
         </div>
       )
