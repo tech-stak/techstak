@@ -16,12 +16,15 @@
   position: relative;
   display: block;
 }
-
+.box-shadow {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
 /*SEARCH RESULTS*/
 
-.company-logo{
+.company-logo {
   width: 100%;
 }
-.company-name{
+.company-name {
   text-align: center;
 }

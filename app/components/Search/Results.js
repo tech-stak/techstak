@@ -1,6 +1,7 @@
 var React = require('react');
 var searchActions = require('../../actions/SearchActions');
 var searchStore = require('../../stores/SearchStore');
+var helpers = require('../../helpers/Helpers');
 
 var Results = React.createClass({
   getInitialState: function(){
@@ -35,12 +36,13 @@ var Results = React.createClass({
       var logo = job.startup.logo_url;
       var name = job.startup.name;
       var jobTitle = job.title;
+      var location = job.location;
       var companyURL = job.startup.angellist_url;
       var jobURL = job.angellist_url;
       var productDes = job.startup.product_desc;
       var jobDescription = job.description;
-      var salaryMin = job.salary_min;
-      var salaryMax = job.salary_max;
+      var salaryMin = helpers.abbrNum(job.salary_min, 0);
+      var salaryMax = helpers.abbrNum(job.salary_max, 0);
       var equityMin = job.equity_min;
       var equityMax = job.equity_max;
       var skills = job.tags.map(function(tag, index){
@@ -49,12 +51,18 @@ var Results = React.createClass({
       }).join(', ');
       return (
         <div className="item" key={index}>
-          <div className="well"> 
+          <div className="box-shadow well"> 
             <a href={jobURL && jobURL}>
               <img src={logo && logo} className="img-thumbnail company-logo" alt={name && name} />
             </a>
               <h2>{name && name}</h2>
-              <h5>{jobTitle && jobTitle}</h5>
+              <h4>{jobTitle && jobTitle}</h4>
+              <h5 className>COMPENSATION</h5>
+              <p>${salaryMin} - ${salaryMax} Salary<br/>
+                  {equityMin}% - {equityMax}% Equity
+              </p>
+              <h5 className>LOCATION</h5>
+              <p>{location}</p>
           </div>
         </div>
       )
