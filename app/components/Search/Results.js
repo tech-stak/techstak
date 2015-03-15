@@ -61,9 +61,9 @@ var Results = React.createClass({
         <div className="item" key={index}>
           <div className="well"> 
             <a href={jobURL && jobURL}>
-              <img src={logo && logo} className="img-thumbnail company-logo" alt={name && name} />
+              <img src={logo && logo} className="img-thumbnail" alt={name && name} />
             </a>
-              <h2>{name && name}</h2>
+              <h3 className="company-name">{name && name}</h3>
               <h4>{jobTitle && jobTitle}</h4>
               <h5 className="divider">LOCATION</h5>
               <p>{location}</p>
